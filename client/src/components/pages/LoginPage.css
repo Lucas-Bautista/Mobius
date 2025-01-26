@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.login-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login-navbar{
+    display: flex;
+    flex-direction: row;
+    background: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-name-navbar{
+    font-size: 3rem;
+    color: white;
+    margin: 2rem;
+}
+
+.body-login{
+    background: linear-gradient(to top, rgb(132, 131, 131), rgb(0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20;
+    align-items: center;
+}
+
+@keyframes typing {
+    0% {
+      width: 0;
+    }
+    
+    50% {
+      width: 50%;
+    }
+    
+    100% {
+      width: 100%; /* Reveal the full width of the text */
+    }
+  }
+  
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: rgb(234, 230, 230);
+    }
+  }
+
+.typed-paragraph{
+    width: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid white;
+    color: white;
+    animation: typing 3s steps(15) 0.5s forwards, blink-caret 0.90s step-end infinite;
+    /* text-align: center; */
+    height: 3rem;
+    position: relative;
+
+}
+
+.text-container{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 10rem;
+}
+
+.google-login {
+    width: 12rem;
+    height: 2rem;
+    margin-top: 2rem;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+}
+
+.google-login.fade-in {
+    animation: fadeIn 0.5s forwards; /* Apply fadeIn animation */
+}
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
