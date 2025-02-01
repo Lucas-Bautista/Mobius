@@ -2,8 +2,9 @@ import React, { useEffect, useContext } from "react";
 
 import "../../utilities.css";
 import "./LoginPage.css";
-import NavBar from "../modules/NavBar";
 import Login from "../modules/Login"
+import MobiusStrip from "../../../dist/assets/mobiusplaceholder.png";
+
 
 const LoginPage = () => {
   
@@ -41,6 +42,10 @@ const LoginPage = () => {
     <div className = "login-page">
       <div className="login-navbar"> 
         <div className="login-name-navbar"> Mobius </div>
+        <img className="login-icon" src={MobiusStrip}></img>
+      </div>
+      <div>
+        
       </div>
       <div className = 'body-login'>
         {/* Include box for typed words */}

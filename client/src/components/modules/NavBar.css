@@ -10,33 +10,46 @@ html {
     background-color: black;
     font-family: "Roboto", sans-serif; 
     color: white;
-    
+    position: relative;
+    transition: box-shadow 0.3s ease
 }
 
 .navbar-icon {
-    margin: 2.1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    height: 3rem;
+    margin: 2rem;
+    margin-bottom: 0.3rem;
+    margin-left: 0.2rem;
+    height: 2rem;
     width: 3rem;
 }
 
 .name-navbar {
     margin: 2rem;
     font-size: 2rem;
-    margin-right:1rem;
+    margin-right:0.5rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease
 }
 
 .rides-navbar {
     margin-left: auto;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     margin-right: 2rem;
     font-size: 1.5rem;
 }
 
 .profile-navbar {
     margin: 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 3rem;
     font-size: 1.5rem;
 }
 
+
+.navbar-mobius:hover {
+    box-shadow: 0 0 10px rgba(34, 47, 61, 0.7), 0 0 20px rgba(34, 47, 61, 0.7), 0 0 30px rgba(34, 47, 61, 0.7);
+  }
+
+.name-navbar:hover {
+    box-shadow: 0 10px 10px rgba(0, 123, 255, 0.7), 0 20px 20px rgba(0, 123, 255, 0.5), 0 30px 30px rgba(0, 123, 255, 0.3);
+}

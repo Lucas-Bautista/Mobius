@@ -9,6 +9,8 @@ import { socket } from "../client-socket";
 
 import { get, post } from "../utilities";
 
+import { useNavigate } from "react-router-dom";
+
 export const UserContext = createContext(null);
 
 /**
@@ -16,6 +18,7 @@ export const UserContext = createContext(null);
  */
 const App = () => {
   const [userId, setUserId] = useState(undefined);
+  const navigate = useNavigate();
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
@@ -33,7 +36,8 @@ const App = () => {
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
       post("/api/initsocket", { socketid: socket.id });
-    });
+    }).then(()=>{navigate("/home")});
+
   };
 
   const handleLogout = () => {

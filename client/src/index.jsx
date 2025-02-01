@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App";
 import LoginPage from "./components/pages/LoginPage";
+import Rides from "./components/pages/Rides";
+import MyRides from "./components/pages/MyRides";
+import Profile from "./components/pages/Profile";
 import NotFound from "./components/pages/NotFound";
 
 import {
@@ -20,6 +23,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route errorElement={<NotFound />} element={<App />}>
       <Route path="/" element={<LoginPage />}/>
+      <Route path='/home' element={<Rides />}/>
+      <Route path='/myrides' element={<MyRides />}/>
+      <Route path='/profile' element={<Profile/>}/>
     </Route>
   )
 )
